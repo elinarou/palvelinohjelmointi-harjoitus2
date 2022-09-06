@@ -1,29 +1,35 @@
 package s22.Harjoitus2_FriendList.domain;
 
 public class Friend {
-	private String name;
-
+	private String fname;
+	private String lname;
+	
 	public Friend() {
 		super();
-	}
 
-	public Friend(String name) {
+	}
+	public Friend(String fname, String lname) {
 		super();
-		this.name = name;
+		this.fname = fname;
+		this.lname = lname;
 	}
-
-	public String getName() {
-		return name;
+	public String getFname() {
+		return fname;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
-
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + "]";
+		return "Friend [fname=" + fname + ", lname=" + lname + "]";
 	}
+	
 	
 	
 }

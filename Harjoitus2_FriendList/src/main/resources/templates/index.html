@@ -7,13 +7,9 @@
 <body>
 	<h1>My friends</h1>
 	<table>	
-		<tr>
-			<td th:text="${friend.name}"></td>
-		</tr>
-		
-		 <!--Alla oleva listaus ei toimi -->
 		<tr th:each="friend : ${friendsList}">
-			<td th:text="${friend.name}"></td>
+			<td th:text="${friend.fname}"></td>
+			<td th:text="${friend.lname}"></td>
 		</tr>
 	</table>
 	
@@ -21,7 +17,8 @@
 	<form action="#" th:action="@{/index}" th:object="${friend}" method="post">
     	<table>
     	<tr>
-    		<td>Name: <input type="text" th:field="*{name}" /></td>
+    		<td>First name: <input type="text" th:field="*{fname}" /></td>
+    		<td>Last name: <input type="text" th:field="*{lname}" /></td>
         </tr>
         </table>
         <p><input type="submit" value="Submit" /></p>
